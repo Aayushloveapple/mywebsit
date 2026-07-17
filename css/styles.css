@@ -1,0 +1,1034 @@
+/* css/styles.css */
+
+/* --- DESIGN SYSTEM (CSS Variables) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@700&display=swap');
+
+:root {
+    /* Colors */
+    --color-primary: #2E8B77;
+    --color-primary-light: #3ab096;
+    --color-secondary: #FF7A59;
+    --color-accent: #FFD166;
+    --color-bg: #FAF9F6;
+    --color-text: #2B2B2B;
+    --color-white: #FFFFFF;
+
+    /* Gradients */
+    --grad-primary: linear-gradient(135deg, #2E8B77, #3ab096);
+    --grad-secondary: linear-gradient(135deg, #FF7A59, #FFD166);
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Layout */
+    --max-width: 1200px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --color-bg: #121614;
+    /* Deep charcoal for your main body background */
+    --color-white: #1e2522;
+    /* Dark gray-green for things like cards or navbars */
+    --color-light: #252e2a;
+    /* Alternate section backgrounds */
+    --color-dark: #ffffff;
+    /* Flips dark headings/titles to white */
+    --color-text: #e0e0e0;
+    /* Soft light gray for body paragraphs */
+    --color-primary: #3dbfa4;
+    /* Slightly brighter green so links/accents pop */
+}
+
+[data-theme="dark"] footer,
+[data-theme="dark"] .footer-section {
+    background-color: #00846b !important;
+    /* Forces the background to your specific green */
+    color: #121614;
+    /* Changes text to dark charcoal for perfect readability */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Keeps all list links inside the dark mode footer legible */
+[data-theme="dark"] footer a,
+[data-theme="dark"] .footer-section a {
+    color: #121614;
+}
+
+/* Gives the footer links a clean white shift when hovered over */
+[data-theme="dark"] footer a:hover,
+[data-theme="dark"] .footer-section a:hover {
+    color: #ffffff;
+}
+
+
+
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+
+    /* ADD THIS LINE at the bottom of your body block so colors fade smoothly */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: var(--transition);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background: var(--grad-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--color-white);
+}
+
+.btn-secondary {
+    background: var(--grad-secondary);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--color-white);
+}
+
+.btn-text {
+    background: transparent;
+    color: var(--color-primary);
+    box-shadow: none;
+    font-weight: 700;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+    color: var(--color-primary-light);
+    transform: translateY(0);
+}
+
+/* --- NAVBAR --- */
+/* ==========================================================================
+   UPDATED NAVIGATION BAR (MORE SPACIOUS & LONGER ROW)
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    /* Keeps dark mode transition smooth */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Increased top/bottom padding to 1.4rem to give it a taller, premium presence */
+    /* Lowered side padding to 3% to let the content stretch further out to the screen edges */
+    padding: 1.4rem 3%;
+    max-width: 1400px;
+    /* Expands the max allowed width across large desktop monitors */
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    /* Slightly bumped up to balance the longer layout */
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    /* Increased gap from 2rem to 2.4rem to spread the links out horizontally */
+    gap: 2.4rem;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+/* --- HERO SECTION --- */
+/* 1. "Become a Member" - Base state & transitions */
+.hero-section .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* "Become a Member" - Hover state */
+.hero-section .btn-primary:hover {
+    background-color: var(--color-secondary);
+    /* Shifts to your secondary branding color */
+    transform: translateY(-3px);
+    /* Subtle physical lift */
+    box-shadow: 0 6px 20px rgba(46, 139, 119, 0.25);
+    /* Soft glowing shadow */
+}
+
+/* 2. "View Upcoming Events" - Base state & transitions */
+.hero-section .btn-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* "View Upcoming Events" - Hover state */
+.hero-section .btn-outline:hover {
+    background-color: var(--color-primary);
+    /* Fills the button cleanly */
+    color: var(--color-white);
+    /* Flips text color to white for contrast */
+    transform: translateY(-3px);
+    /* Matches the same physical lift */
+    box-shadow: 0 6px 20px rgba(46, 139, 119, 0.15);
+}
+
+/* --- LAYOUT GRIDS --- */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* --- CARDS --- */
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.event-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+}
+
+.event-card img {
+    border-radius: 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 1.5rem;
+}
+
+.event-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.event-meta i {
+    color: var(--color-primary);
+    width: 20px;
+}
+
+.team-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.team-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.team-role {
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* --- TESTIMONIAL CAROUSEL --- */
+.testimonial-section {
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: none;
+    padding: 2rem;
+    animation: fadeIn 0.5s;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.carousel-controls {
+    margin-top: 1rem;
+}
+
+.carousel-controls button {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+program
+   ========================================================================== */
+
+/* Outer Framework Layout */
+.programs-container {
+    padding: 4rem 0;
+}
+
+.programs-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.programs-subheading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    color: var(--color-text);
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* Flex/Grid Cards Canvas Container */
+.programs-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Individual Card Structural Architecture */
+.program-card {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Interaction States */
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image Mask Frame */
+.card-image-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.program-card:hover .card-image-box img {
+    transform: scale(1.05);
+}
+
+/* Inner Text Area Box Content */
+.card-body {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: rgba(0, 0, 0, 0.03);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-dark);
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*------------------------------------------------*/
+.tabs-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+
+.tab-btn {
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.tab-content {
+    display: none;
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s;
+}
+
+
+/*-----------------------------------------------------------------------
+
+/* --- ACCORDION (Resources) --- */
+
+/* quick overview */
+.resource-overview{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.5rem;
+    margin:3rem 0;
+}
+
+.overview-card{
+    background:#fff;
+    border-radius:18px;
+    padding:2rem 1rem;
+    text-align:center;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.overview-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+}
+
+.overview-card h3{
+    font-size:2.5rem;
+    font-weight:700;
+    color:var(--color-primary);
+    margin-bottom:.6rem;
+    line-height:1;
+}
+
+.overview-card p{
+    font-size:1rem;
+    color:#666;
+    font-weight:500;
+    margin:0;
+}
+/* ----------------------------------- */
+
+
+.accordion-item {
+    background: var(--color-white);
+    margin-bottom: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.accordion-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+/* --- FILTERS (Events) --- */
+.filter-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+.hide-event {
+    display: none !important;
+}
+
+/* --- FORMS --- */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+}
+
+#form-success {
+    display: none;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-top: 1rem;
+}
+
+/* --- UTILS --- */
+.disclaimer {
+    background: #ffd166;
+    color: black;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 3rem;
+    transition: background #845f08 ease, color #845f08, border-color #845f08;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    padding: 4rem 5% 2rem;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 2rem;
+}
+
+.footer h3 {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: var(--color-bg);
+}
+
+.footer a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* ==========================================================
+   TABLET (769px - 1024px)
+========================================================== */
+@media (max-width:1024px){
+
+    .container{
+        width:92%;
+    }
+
+    .nav-container{
+        padding:1rem 4%;
+    }
+
+    .nav-links{
+        gap:1.2rem;
+    }
+
+    .grid-4{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-3{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+
+    .resource-overview{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .programs-card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    h1{
+        font-size:3rem;
+    }
+
+    h2{
+        font-size:2.2rem;
+    }
+
+    .team-card img{
+        height:220px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE (768px and below)
+========================================================== */
+@media (max-width:768px){
+
+    /* Navigation */
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-container{
+        padding:1rem 5%;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:var(--color-white);
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        gap:1rem;
+        padding:2rem 0;
+        box-shadow:var(--shadow-md);
+        z-index:999;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    /* Layout */
+    .container{
+        width:95%;
+        padding:3rem 0;
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2,
+    .programs-card-grid,
+    .resource-overview,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Hero */
+    .hero{
+        padding:4rem 1.5rem;
+        text-align:center;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        max-width:320px;
+    }
+
+    /* Tabs */
+    .tabs-header{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .tab-btn{
+        width:100%;
+        max-width:320px;
+    }
+
+    .tab-content{
+        padding:1.5rem;
+    }
+
+    /* Cards */
+    .card{
+        padding:1.5rem;
+    }
+
+    .event-card img,
+    .team-card img{
+        height:220px;
+    }
+
+    /* Typography */
+    h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    h3{
+        font-size:1.3rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    /* Footer */
+    .footer{
+        text-align:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+        display:flex;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE (480px and below)
+========================================================== */
+@media (max-width:480px){
+
+    .container{
+        width:94%;
+    }
+
+    h1{
+        font-size:1.9rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+    h3{
+        font-size:1.2rem;
+    }
+
+    p{
+        font-size:0.95rem;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .overview-card{
+        padding:1.5rem 1rem;
+    }
+
+    .event-info,
+    .team-info,
+    .card-body{
+        padding:1rem;
+    }
+
+    .accordion-header{
+        padding:1rem;
+        font-size:0.95rem;
+    }
+
+    .accordion-content{
+        font-size:0.95rem;
+    }
+
+    .tab-content{
+        padding:1rem;
+    }
+
+    .footer{
+        padding:3rem 1rem 2rem;
+    }
+}

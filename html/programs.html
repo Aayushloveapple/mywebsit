@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | HealthConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo"><i class="fa-solid fa-leaf"></i> HealthConnect</a>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <!-- Keep the class="active" on whichever page you are currently viewing -->
+                <a href="/index.html">Home</a>
+                <a href="about.html"  >About</a>
+                <a href="programs.html" class="active">Programs</a>
+                <a href="events.html">Events</a>
+                <a href="resources.html">Resources</a>
+                <a href="blog.html">Blog</a>
+                <a href="merch.html">Merch</a>
+                <a href="faq.html">FAQ</a>
+                 <!-- THE NEW DARK MODE TOGGLE BUTTON -->
+    <button id="theme-toggle" style="background: none; border: none; color: var(--color-dark); cursor: pointer; font-size: 1.2rem; padding: 0 1rem;">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+                <a href="membership.html" class="btn btn-primary" style="color: white;">Join Us</a>
+            </nav>
+        </div>
+    </header>
+
+  <!-- CONTENT -->
+    <main class="programs-container container">
+        <h1 class="programs-heading">Our Programs</h1>
+        <p class="programs-subheading">
+            Explore our comprehensive peer-led frameworks designed to keep your physical, mental, and nutritional health fully aligned throughout the academic semester.
+        </p>
+
+        <!-- TABS HEADER -->
+        <div class="tabs-header">
+            <button class="tab-btn active"data-target="all">All</button>
+            <button class="tab-btn" data-target="tab-fitness">Physical Fitness</button>
+            <button class="tab-btn" data-target="tab-mental">Mental Well-Being</button>
+            <button class="tab-btn" data-target="tab-nutrition">Nutrition & Eating</button>
+            <button class="tab-btn" data-target="tab-lifestyle">Active Lifestyle</button>
+             
+        </div>
+
+        <!-- TABS CONTENT -->
+        
+        <!-- 1. Physical Fitness Tab -->
+        <div class="tab-content" id="tab-fitness">
+            <div class="programs-card-grid">
+                <!-- Card 1 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Group fitness">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Cardio & Core</span>
+                        <h3>Group Class Rotations</h3>
+                        <p>High-energy group environments featuring Sunrise Vinyasa Yoga, HIIT circuits, and evening mobility sessions tailored for all fitness levels.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=500&q=80" alt="Running club">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Community</span>
+                        <h3>Run Club Meetups</h3>
+                        <p>Progressive Couch-to-5K training paths alongside bi-weekly casual mixed-sport pick-up matches like soccer and ultimate frisbee.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Weightlifting">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Education</span>
+                        <h3>Gym Literacy Labs</h3>
+                        <p>Conquer "gym anxiety" with structural weight room safety orientations and detailed lifting mechanics tutorials for compound movements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Mental Tab -->
+        <div class="tab-content" id="tab-mental">
+            <div class="programs-card-grid">
+                <!-- Card 1 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=500&q=80" alt="Meditation">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Resilience</span>
+                        <h3>Stress Mitigation Systems</h3>
+                        <p>Midterm and final exam de-escalation bootcamps combined with time-blocking strategies to effectively curb procrastination spirals.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Peer support group">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Connection</span>
+                        <h3>Peer Support Circles</h3>
+                        <p>Confidential, zero-judgment sharing environments with specialized discussion branches for first-year and international student navigation.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=500&q=80" alt="Mindfulness session">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Mindfulness</span>
+                        <h3>Tactical Breathing Modules</h3>
+                        <p>Guided physical breathing frameworks for acute anxiety control, held in peaceful sensory relaxation zones across campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Nutrition Tab -->
+        <div class="tab-content" id="tab-nutrition">
+            <div class="programs-card-grid">
+                <!-- Card 1 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Healthy salad bowl">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Budget</span>
+                        <h3>The Under-$5 Strategy</h3>
+                        <p>Bulk ingredient batch-cooking strategies and rapid dorm room microwave blueprints optimized for complete macronutrient balances.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=500&q=80" alt="Dietitian consult">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Expertise</span>
+                        <h3>Clinical Micronutrient Seminars</h3>
+                        <p>Professional workshops covering critical energy drops (Vitamin D, Iron) and blood sugar pacing to eliminate afternoon lecture crashes.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=500&q=80" alt="Food navigation map">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Navigation</span>
+                        <h3>Dining Hall Engineering</h3>
+                        <p>Strategic structural maps highlighting healthy adjustments inside common campus food courts and local student union spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Lifestyle Tab -->
+        <div class="tab-content" id="tab-lifestyle">
+            <div class="programs-card-grid">
+                <!-- Card 1 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://as2.ftcdn.net/jpg/09/45/07/97/1000_F_945079748_VAv509ZQvHs3DyHj2lrHZ46bmR7x6XR2.jpg" alt="Tracking layout on phone">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Habits</span>
+                        <h3>Behavioral Metric Matrices</h3>
+                        <p>Accountability setups targeting an 8-hour sleep index, featuring point-based community leaderboards and hydration challenges.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=500&q=80" alt="Mountain hiking">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Outdoors</span>
+                        <h3>State Park Expeditions</h3>
+                        <p>Weekend wilderness navigation trips and local tree canopy identification tours designed for quick eco-therapy decompression.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="program-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=500&q=80" alt="Ergonomic desk">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Ergonomics</span>
+                        <h3>Workspace Structural Audits</h3>
+                        <p>Corrective desk posture setups aimed at long-term lumbar protection alongside digital screen fatigue mitigation tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-leaf"></i> HealthConnect</h3>
+                <p>Student Wellness Club — Empowering Students to Live Healthier, Happier Lives.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Resources & Support</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="merch.html">Club Merch</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="membership.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <div class="social-icons">
+                 <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HealthConnect Student Wellness Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

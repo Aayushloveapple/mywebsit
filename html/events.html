@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | HealthConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo"><i class="fa-solid fa-leaf"></i> HealthConnect</a>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <!-- Keep the class="active" on whichever page you are currently viewing -->
+                <a href="/index.html">Home</a>
+                <a href="about.html"  >About</a>
+                <a href="programs.html">Programs</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="resources.html">Resources</a>
+                <a href="blog.html">Blog</a>
+                <a href="merch.html">Merch</a>
+                <a href="faq.html">FAQ</a>
+                 <!-- THE NEW DARK MODE TOGGLE BUTTON -->
+    <button id="theme-toggle" style="background: none; border: none; color: var(--color-dark); cursor: pointer; font-size: 1.2rem; padding: 0 1rem;">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+                <a href="membership.html" class="btn btn-primary" style="color: white;">Join Us</a>
+            </nav>
+        </div>
+    </header>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="container text-center">
+        <h1>Upcoming Events</h1>
+        <p style="max-width: 600px; margin: 0 auto 2rem;">Stay active, connected, and inspired! Check out our upcoming
+            events — all are welcome, whether you're a member or just curious.</p>
+
+        <!-- Filters -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="fitness">Fitness</button>
+            <button class="filter-btn" data-filter="mental">Mental Health</button>
+            <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+            <button class="filter-btn" data-filter="social">Social</button>
+        </div>
+
+        <!-- Event Grid -->
+        <div class="grid-3" id="events-container">
+            <!-- Event 1 -->
+            <div class="event-card" data-category="fitness">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=400&q=80"
+                    alt="HIIT Class">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">FITNESS</span>
+                    <h3>Morning HIIT Circuit</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Monday, 7:00 AM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Campus Rec Center</span>
+                    </div>
+                    <p>Start your week strong with a 45-minute high-intensity interval training session.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="event-card" data-category="mental">
+                <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=400&q=80"
+                    alt="Meditation">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">MENTAL
+                        HEALTH</span>
+                    <h3>Mid-Term Mindful Meditation</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Wednesday, 6:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Student Union Room 204</span>
+                    </div>
+                    <p>Decompress from exams with guided mindfulness and breathing exercises.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+            </div>
+            <!-- Event 3 -->
+            <div class="event-card" data-category="nutrition">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80"
+                    alt="Meal Prep">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">NUTRITION</span>
+                    <h3>Dorm-Friendly Meal Prep</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Thursday, 5:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Virtual (Zoom)</span>
+                    </div>
+                    <p>Learn how to prep healthy, budget-friendly meals using just a microwave and mini-fridge.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+
+            </div>
+
+
+            <!-- Event 4 -->
+            <div class="event-card" data-category="social">
+                <img src="https://wellness.utah.edu/_resources/images/october-newsletter-header.jpg"
+                    alt="Social Meetup">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">SOCIAL</span>
+                    <h3>Campus Wellness <br> Walk</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Saturday, 10:00 AM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Main Library Steps</span>
+                    </div>
+                    <p>
+                    <p>
+                        Grab a coffee, enjoy the fresh air, and join fellow students for a relaxing.
+                    </p>
+                    </p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+            </div>
+            <!-- event -->
+
+            <div class="event-card" data-category="fitness">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=400&q=80"
+                    alt="Morning Bootcamp">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        FITNESS
+                    </span>
+
+                    <h3>Morning Fitness <br>Bootcamp</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Every Wednesday, 7:00 AM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Campus Sports Ground</span>
+                    </div>
+
+                    <p>
+                        Start the day with an full body workout led by our
+                        instructors.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- Event 5 -->
+            <div class="event-card" data-category="fitness">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80"
+                    alt="Yoga Session">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">FITNESS</span>
+                    <h3>Sunset Yoga on the <br>Quad</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Next Friday, 5:30 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Main Campus Quad</span>
+                    </div>
+                    <p>Unwind after a long week of classes with an all-levels outdoor yoga flow.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+            </div>
+            <!-- Event 6 -->
+            <div class="event-card" data-category="mental">
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=400&q=80"
+                    alt="Support Circle">
+                <div class="event-info">
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">MENTAL
+                        HEALTH</span>
+                    <h3>Peer Support <br>Circle</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Bi-weekly Tuesdays</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Counseling Center Lounge</span>
+                    </div>
+                    <p>A safe, confidential space to talk about student life, stress, and mental health without fear of
+                        judgment of others.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Join</a>
+                </div>
+            </div>
+
+            <!-- event -->
+            <div class="event-card" data-category="mental">
+                <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=400&q=80"
+                    alt="Stress Management">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        MENTAL HEALTH
+                    </span>
+
+                    <h3>Stress Management <br> Seminar</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Monday, 3:30 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Student Conference Hall</span>
+                    </div>
+
+                    <p>
+                        Discover healthy coping strategies for academic pressure, improve your
+                        time management skills.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- event -->
+            <div class="event-card" data-category="nutrition">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80"
+                    alt="Healthy Smoothies">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        NUTRITION
+                    </span>
+
+                    <h3>Healthy Smoothie Workshop</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Saturday, 11:00 AM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Student Cafeteria</span>
+                    </div>
+
+                    <p>
+                        Discover quick, delicious smoothie recipes packed with vitamins,
+                        protein, and energy to keep you focused throughout your day.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+            </div>
+            <div class="event-card" data-category="nutrition">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80"
+                    alt="Healthy Eating">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        NUTRITION
+                    </span>
+
+                    <h3>Balanced Eating for Student Success</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Tuesday, 4:30 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> HealthConnect Hall</span>
+                    </div>
+
+                    <p>
+                        Learn how to build balanced meals, understand food labels,
+                        and make healthier choices while staying within a student budget.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="event-card" data-category="social">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80"
+                    alt="Game Night">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        SOCIAL
+                    </span>
+
+                    <h3>Student Game & Trivia Night</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Friday, 6:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Student Activity Center</span>
+                    </div>
+
+                    <p>
+                        Meet new friends while enjoying board games, trivia challenges,
+                        and fun team activities in a relaxed and welcoming environment.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+            </div>
+            <div class="event-card" data-category="social">
+                <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=400&q=80"
+                    alt="Community Picnic">
+
+                <div class="event-info">
+
+                    <span
+                        style="background: var(--color-bg); color: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">
+                        SOCIAL
+                    </span>
+
+                    <h3>Community Picnic & Wellness Fair</h3>
+
+                    <div class="event-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Sunday, 12:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Central Campus Park</span>
+                    </div>
+
+                    <p>
+                        Spend the afternoon enjoying healthy snacks, outdoor games and opportunities to connect with
+                        fellow students and club members.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">
+                        Join
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- GALLERY -->
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Past Events Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                alt="Gallery 1">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=400&q=80"
+                alt="Gallery 2">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
+                alt="Gallery 3">
+            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80"
+                alt="Gallery 4">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-leaf"></i> HealthConnect</h3>
+                <p>Student Wellness Club — Empowering Students to Live Healthier, Happier Lives.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Resources & Support</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="merch.html">Club Merch</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="membership.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <div class="social-icons">
+                     <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HealthConnect Student Wellness Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

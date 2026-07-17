@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect | Student Wellness Club</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> HealthConnect</a>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <!-- Keep the class="active" on whichever page you are currently viewing -->
+                <a href="index.html" class="active">Home</a>
+                <a href="/html/about.html">About</a>
+                <a href="/html/programs.html">Programs</a>
+                <a href="/html/events.html">Events</a>
+                <a href="/html/resources.html">Resources</a>
+                <a href="/html/blog.html">Blog</a>
+                <a href="/html/merch.html">Merch</a>
+                <a href="/html/faq.html">FAQ</a>
+                <!-- THE NEW DARK MODE TOGGLE BUTTON -->
+    <button id="theme-toggle" style="background: none; border: none; color: var(--color-dark); cursor: pointer; font-size: 1.2rem; padding: 0 1rem;">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+                <a href="/html/membership.html" class="btn btn-primary" style="color: white;">Join Us</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- 1. NEW WELCOME SECTION (NOW AT THE TOP) -->
+    <section class="welcome-section" style="padding: 2rem 0 4rem 0; background-color: var(--color-light);">
+        <div class="container grid-2">
+            <div class="welcome-text">
+                <span class="badge"
+                    style="background: var(--color-secondary); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">Welcome
+                    to HealthConnect</span>
+                <h1 style="font-size: 2.8rem; margin-top: 1rem; color: var(--color-dark); line-height: 1.2;">Your
+                    Journey to a Balanced Student Life Starts Here</h1>
+                <p style="font-size: 1.1rem; color: #555; margin: 1.5rem 0 2rem 0; line-height: 1.6;">
+                    HealthConnect is a student-led community dedicated to helping you navigate university life healthily
+                    and happily. We bring physical fitness, mental resilience, and nutritional education together under
+                    one roof.
+                </p>
+                <div class="welcome-features" style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--color-primary);"></i>
+                        <span>Inclusive, zero-judgment environment for all fitness levels</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--color-primary);"></i>
+                        <span>Free student-run workshops and peer support networks</span>
+                    </div>
+                </div>
+                <a href="about.html" class="btn btn-secondary">Learn Our Story</a>
+            </div>
+            <div class="welcome-image" style="display: flex; align-items: center; justify-content: center;">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+                    alt="Students collaborating happily"
+                    style="border-radius: 12px; width: 100%; max-height: 400px; object-fit: cover; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 2. NEW HERO SECTION (NOW IN THE SECOND POSITION) -->
+    <section class="hero-section"
+        style="padding: 5rem 0; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Ready to Prioritize Your Well-being?</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2.5rem; line-height: 1.6;">
+                Join thousands of students who are already tracking goals, attending life-changing workshops, and
+                building friendships that keep them grounded.
+            </p>
+            <div class="hero-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="membership.html" class="btn btn-outline"
+                    style="border-color: white; color: white;">Become
+                    a Member</a>
+                <a href="events.html" class="btn btn-outline" style="border-color: white; color: white;">View Upcoming
+                    Events</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 4-COLUMN ICON GRID -->
+    <section class="container grid-4">
+        <div class="card">
+          
+            <h3>Fitness Programs</h3>
+            <p>Group workouts, sports meetups, and training tips.</p>
+        </div>
+        <div class="card">
+            
+            <h3>Mental Wellness</h3>
+            <p>Stress management workshops and peer support circles.</p>
+        </div>
+        <div class="card">
+            
+            <h3>Nutrition Guidance</h3>
+            <p>Healthy eating tips tailored for student budgets and schedules.</p>
+        </div>
+        <div class="card">
+            
+            <h3>Community Events</h3>
+            <p>Wellness fairs, challenges, and social meetups.</p>
+        </div>
+    </section>
+
+    <!-- FEATURED EVENT -->
+    <section class="container">
+        <h2 style="text-align: center;">Featured Event</h2>
+        <div class="event-card" style="display: flex; flex-wrap: wrap; margin-top: 2rem;">
+            <img src="../Gallery/sunset yoga.avif" alt="Yoga Session" style="flex: 1; min-width: 300px; height: auto;">
+            <div class="event-info"
+                style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                <h3>Sunset Yoga on the Quad</h3>
+                <div class="event-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Next Friday, 5:30 PM</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Main Campus Quad</span>
+                </div>
+                <p>Unwind after a long week of classes with an all-levels yoga flow. Bring a mat or borrow one of ours!
+                </p>
+                <a href="events.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 1rem;">Register
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL CAROUSEL -->
+    <section class="testimonial-section">
+        <div class="container carousel-container">
+            <h2>Student Stories</h2>
+            <div class="testimonial-slide active">
+                <p class="testimonial-text">"HealthConnect helped me build a workout routine I actually stick to — and
+                    I've made some great friends along the way."</p>
+                <h4>Sarah Jenkins, Junior / Biology Major</h4>
+            </div>
+            <div class="testimonial-slide">
+                <p class="testimonial-text">"The stress-relief workshops during finals week were a lifesaver. I felt
+                    supported instead of alone."</p>
+                <h4>Marcus Thorne, Senior / Engineering</h4>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev-slide"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                <button id="next-slide"><i class="fa-solid fa-circle-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-leaf"></i> HealthConnect</h3>
+                <p>Student Wellness Club — Empowering Students to Live Healthier, Happier Lives.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Resources & Support</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="merch.html">Club Merch</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="membership.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <div class="social-icons">
+                   <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HealthConnect Student Wellness Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
